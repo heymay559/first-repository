@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20211214exercise2</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        .left-nav{
+            width: 200px;
+            height: 190px;
+            padding: 10px 0px;
+            background-color: white;
+            margin: 20px;
+        }
+        /*设置菜单内部的item*/
+        .left-nav .item{
+            height: 25px;
+        /*使得文字在父元素中垂直居中，需将父元素的line-height设置为一个和父元素height一样值即可。*/
+            line-height: 25px;
+            padding-left: 18px;
+            /*设置/的大小*/
+            font-size: 13px;
+        }
+
+        /*设置鼠标移入的状态*/
+        .item:hover{
+            background-color: lightgrey;
+        }
+        .item a{
+            /*设置字体大小，此处没有覆盖/的大小，所以/大小仍是13px*/
+            font-size: 15px;
+            /*设置字体颜色*/
+            color: #333;
+            /*去除下划线*/
+            text-decoration: none;
+        }
+        .item a:hover{/*设置超链接的hover样式*/
+            color: #c81623;
+        }
+    </style>
+</head>
+<body>
+    <h1>京东左侧导航条</h1>
+    <!--我的作答-->
+    <!--
+    <ul>
+    <li>
+        <a href="//jiadian.jd.com">家用电器</a>
+    </li>
+
+    <li>
+        <a href="//shouji.jd.com&#47;">手机</a> <span>/</span>
+        <a href="//wt.jd.com">运营商</a><span>/</span>
+        <a href="//shuma.jd.com&#47;">数码</a>
+    </li>
+
+    <li>
+        <a href="//diannao.jd.com&#47;">电脑</a> <span>/</span>
+        <a href="//bg.jd.com">办公</a>
+    </li>
+    </ul>
+    -->
+
+    <!--创建外部容器可以用nav(div)/div(div)/ul(li)，以下为nav示范作答-->
+    <nav class="left-nav">
+        <div class="item">
+            <a href="//jiadian.jd.com">家用电器</a>
+        </div>
+            
+        <div class="item">
+            <a href="//shouji.jd.com&#47;">手机</a><span>/</span><a href="//wt.jd.com">运营商</a><span>/</span><a href="//bg.jd.com">数码</a>
+        </div>
+
+        <div class="item">
+            <a href="">电脑</a>/<a href="">办公</a>
+        </div>
+
+        <div class="item">
+            <a href="">家居</a>/<a href="">家具</a>/<a href="">家装</a>/<a href="">厨具</a>
+        </div>
+
+        <div class="item">
+            <a href="">男装</a>/<a href="">女装</a>/<a href="">童装</a>/<a href="">内衣</a>
+        </div>
+
+        <div class="item">
+            <a href="">美妆</a>/<a href="">个护清洁</a>/<a href="">宠物</a>
+        </div>
+
+        <div class="item">
+            <a href="">女鞋</a>/<a href="">箱包</a>/<a href="">钟表</a>/<a href="">珠宝</a>
+        </div>
+
+        <div class="item">
+            <a href="">男鞋</a>/<a href="">运动</a>/<a href="">户外</a>
+        </div>
+    </nav>
+
+</body>
+</html>

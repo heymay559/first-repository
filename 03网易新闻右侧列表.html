@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20211214exercise</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        /*设置容器样式*/
+        body{
+            background-color: wheat;
+        }
+        a{
+            text-decoration: none;
+        }
+        .news-wrapper{
+            width: 300px;
+            height: 350px;
+            background-color: white;
+            margin: 10px;
+            /*设置上边框*/
+            border-top: 1px solid #ddd;
+            color: black;
+            font-size: 16px;   
+        }
+        .news-title{
+            /*为了边框和文字宽度一致，需要将h2转换为行内块元素*/
+            display: inline-block;
+            /*设置高度*/
+            height: 30px;            
+            /*设置上边框*/
+            border-top: 1px red solid
+            /*通过margin-top将h2上移，盖住上边框*/;
+            margin-top: -1px;
+            /* font-size: 22px; */
+            /*将“体育”向下挤10px*/
+            padding-top: 10px;
+        }
+        .news-title a{
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+        }
+        /*设置图片容器的高度，避免下面的元素一起往上走*/
+        .news-img{
+            height: 150px;
+        }
+        /*设置图片的文字效果*/
+        .news-img .img-title{
+            color: white;
+            /*向上移动文字*/
+            margin-top: -32px;
+            font-weight: bold;
+            padding-left: 28px;
+        }
+        /*设置新闻列表*/
+        .news-list{
+            /*设置上外边距-li字体往右走*/
+            margin-top: 20px;
+            /*设置padding-li字体往右走*/
+            padding-left:0px;
+            /*设置“方形”项目符号-缺点是，在不同浏览器显示效果可能不同
+            list-style: square; */
+        }
+        /*设置li*/
+        .news-list li{
+            /*设置下外边距*/
+            margin-bottom: 17px;
+        }
+        /*通过before伪元素，为每一个li添加项目符号*/
+        .news-list li::before{
+            content: '∙';
+            color: rgb(218 218 218);
+            margin-right: 4px;
+        }
+        /*设置li中的文字*/
+        .news-list a{
+            font-size: 13px;
+            color: #666;
+        }
+        /*设置超链接鼠标移入时字体颜色*/
+        .news-list li a:hover{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>网易新闻右侧列表</h1>
+    <!--以下为示范作答-->
+    <!--创建新闻列表的外侧容器-->
+    <div class="news-wrapper">
+        <!--创建标题标签-->
+        <h2 class="news-title">
+            <a href="">体育</a>
+        </h2>
+        <!--创建图片的容器-->
+        <div class="news-img">
+            <a href="https://www.163.com/sports/article/GR8HSL2O0005877U.html">
+                <img src="./图片列表/4.webp" alt="库里">
+                <!--创建图片的标题-->
+                <h3 class="img-title">库里妹夫三不沾 雷-阿伦歪嘴成表情包 </h3>
+            </a>
+        </div>
+        <!--新闻列表-->
+        <ul class="news-list">
+            <li>
+                <a href="https://war.163.com/photoview/4T8E0001/2312917.html">日美大规模联合军演大雪中持续进行</a>
+            </li>
+            <li>
+                <a href="https://war.163.com/photoview/4T8E0001/2312916.html">美国最新夜视仪采用"人体描边"式设计</a>
+            </li>
+            <li>
+                <a href="https://www.163.com/news/article/GR60D9V80001899O.html">广东紧急通知:此类旅客须持48小时核酸证明登机</a>
+            </li>
+            <li>
+                <a href="https://www.163.com/news/article/GR5VOP2C00019K82.html">贵阳机场T3航站楼带来“智慧出行”新体验</a>
+            </li>
+        </ul>
+
+
+    </div>
+
+
+
+<!--以下为我的作答-->
+<!--
+    <div>
+        <div class="item">
+            <h2>
+                <a href="https://war.163.com/">军事</a>
+                <i>·</i>
+                <a href="https://news.163.com/air/">航空</a>
+            </h2>
+        </div>
+        <div class="item">
+            <a href="https://war.163.com/photoview/4T8E0001/2312918.html">
+               <img src="https://cms-bucket.ws.126.net/2021/1214/4a5e3cd5j00r431h6000qc000s600e3c.jpg?imageView&thumbnail=300y150" width="300" height="150" alt="西藏军区实战演练 81杠抢镜！">
+               <div>
+                   <h3>西藏军区实战演练 81杠抢镜！</h3>
+               </div>
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="https://war.163.com/photoview/4T8E0001/2312917.html">日美大规模联合军演大雪中持续进行</a>
+            </li>
+            <li>
+                <a href="https://war.163.com/photoview/4T8E0001/2312916.html">美国最新夜视仪采用"人体描边"式设计</a>
+            </li>
+            <li>
+                <a href="https://www.163.com/news/article/GR60D9V80001899O.html">广东紧急通知:此类旅客须持48小时核酸证明登机</a>
+            </li>
+            <li>
+                <a href="https://www.163.com/news/article/GR5VOP2C00019K82.html">贵阳机场T3航站楼带来“智慧出行”新体验</a>
+            </li>
+        </ul>
+    </div>
+-->
+
+<!--
+    <div class="mt35 mod_war" ne-class="{{myState.isReadypage ? 'cm_area_show' : ''}}">
+        <div class="idx_cm_title">
+            <h2 class="title">
+                <a href="https://war.163.com/">军事</a>
+                <i>·</i>
+                <a href="https://news.163.com/air/">航空</a>
+            </h2>
+        </div>
+        <div class="idx_cm_img">
+            <a href="https://war.163.com/photoview/4T8E0001/2312918.html">
+            <img ne-lazy="effect:fadeIn;slideIndex:0;" data-original="https://cms-bucket.ws.126.net/2021/1214/4a5e3cd5j00r431h6000qc000s600e3c.jpg?imageView&thumbnail=300y150" width="300" height="150" alt="西藏军区实战演练 81杠抢镜！">
+            <div class="bg">
+                <h3>西藏军区实战演练 81杠抢镜！</h3>
+            </div>
+            </a>
+        </div>
+            <ul class="mt12 idx_cm_list idx_cm_list_h">
+                <li>
+                <a href="https://war.163.com/photoview/4T8E0001/2312917.html">日美大规模联合军演大雪中持续进行</a>
+                </li>
+                <li>
+                <a href="https://war.163.com/photoview/4T8E0001/2312916.html">美国最新夜视仪采用"人体描边"式设计</a>
+                </li>
+                                                                            <li>
+                <a href="https://www.163.com/news/article/GR60D9V80001899O.html">广东紧急通知:此类旅客须持48小时核酸证明登机</a>
+            </li>
+                                            <li>
+                <a href="https://www.163.com/news/article/GR5VOP2C00019K82.html">贵阳机场T3航站楼带来“智慧出行”新体验</a>
+            </li>
+                                        </ul>
+    </div>
+-->
+
+</body>
+</html>

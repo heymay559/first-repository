@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20211214exercise</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>/*虽然显示效果一样，但写的时候注意层次关系后期维护更清晰容易。*/
+    .img-list{/*设置外部ul样式*/
+        width: 490px;
+        height: 270px;
+        overflow: hidden;/*裁剪溢出的内容*/
+        /* margin: 50px auto; 使ul在页面中居中*/
+        background-color: blanchedalmond;
+    }   
+    .img-list li:not(:last-child){
+        margin-bottom:11.5px;
+    }
+    .img-list img{/*设置图片大小*/
+        width: 100%;
+    }     
+    </style>
+</head>
+<body>
+    <h1>图片列表作业</h1>
+    <!--
+    我的作答
+        <dl>
+        <dt><img src="./图片列表/1.png" alt="图片列表1"> 
+        </dt>
+        <dt><img src="./图片列表/2.png" alt="图片列表2">
+        </dt>
+        <dt><img src="./图片列表/3.png" alt="图片列表3">
+        </dt>
+    </dl>
+    -->
+
+    <!--
+    示例第一种方法
+        <div>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div>
+    -->
+
+    <!--以下为第二种示例-->
+    <ul class="img-list">
+        <li>
+            <a href="">
+                <img src="./图片列表/1.png" alt="图片列表1">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="./图片列表/2.png" alt="图片列表2">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="./图片列表/3.png" alt="图片列表3">
+            </a>
+        </li>
+
+    </ul>
+
+    
+    
+</body>
+</html>
